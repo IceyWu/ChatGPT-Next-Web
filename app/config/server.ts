@@ -100,7 +100,8 @@ export const getServerSideConfig = () => {
 
     hideUserApiKey: !!process.env.HIDE_USER_API_KEY,
     disableGPT4,
-    hideBalanceQuery: !process.env.ENABLE_BALANCE_QUERY,
+    // hideBalanceQuery: !process.env.ENABLE_BALANCE_QUERY,
+    hideBalanceQuery: false,
     disableFastLink: !!process.env.DISABLE_FAST_LINK,
     customModels,
   };
