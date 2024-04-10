@@ -79,6 +79,10 @@ export const getServerSideConfig = () => {
     `[Server Config] using ${randomIndex + 1} of ${apiKeys.length} api key`,
   );
 
+  const whiteWebDevEndpoints = (process.env.WHITE_WEBDEV_ENDPOINTS ?? "").split(
+    ",",
+  );
+
   return {
     baseUrl: process.env.BASE_URL,
     apiKey,
@@ -113,5 +117,6 @@ export const getServerSideConfig = () => {
     hideBalanceQuery: false,
     disableFastLink: !!process.env.DISABLE_FAST_LINK,
     customModels,
+    whiteWebDevEndpoints,
   };
 };
